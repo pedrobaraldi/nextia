@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "24a92850-11a7-4d16-aa94-88575e3ce3e8",
+		"name": "nextai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29962160"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Cliente",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/8.6.1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"nome\": \"Julia\",\n    \"cpf\": \"56842367104\",\n    \"email\": \"julia@gmail.com\",\n    \"senha\": \"12345\",\n    \"genero\": \"feminino\",\n    \"dt_nascimento\": \"2003-06-24\",\n    \"telefone\": \"551199789664319\",\n    \"pontos\": \"0\",\n    \"fidelidade\": \"NÃOFILIADO\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Cadastro",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/8.6.1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Bia\",\n\t\"cpf\": \"56842367104\",\n\t\"email\": \"bia@gmail.com\",\n\t\"senha\": \"1234\",\n\t\"genero\": \"feminino\",\n\t\"dt_nascimento\": \"2003-06-24\",\n\t\"telefone\": \"55119975864319\",\n\t\"pontos\": \"500\",\n\t\"fidelidade\": \"FILIADO\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/cliente/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Apagar Cadastro",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/8.6.1"
+					}
+				],
+				"url": "localhost:8080/cliente/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhar Cadastro",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/8.6.1"
+					}
+				],
+				"url": "localhost:8080/cliente/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Cadastro ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/8.6.1"
+					}
+				],
+				"url": "localhost:8080/cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Produto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/produto"
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhar Produto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/produto/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Apagar Produto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/produto/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Produto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"nome\": \"Arroz\",\n\t\t\"categoria\": \"gãos\",\n\t\t\"valor\": 45.99\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/produto"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Produto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n\t\"nome\": \"Feijão\",\n\t\"categoria\": \"gãos\",\n\t\"valor\": 45.99\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/categoria/1"
+			},
+			"response": []
+		}
+	]
+}
